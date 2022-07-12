@@ -3,7 +3,9 @@ const app = express();
 const tasks = require('./routes/tasks');
 const connectdb = require('./dbconnect');
 require('dotenv').config();
+
 //middleware
+// app.use(express.static('./public'));
 app.use(express.json());
 
 //routes
@@ -34,7 +36,9 @@ const start = async() => {
 start();
 
 
-/*========= Examples of crud function by creating sample api's =============
+/*========= Examples of crud function by creating sample api's. 
+It is only the pattern not fixed.
+We can create own api link also=============
 
 app.get('/api/v1/tasks')        -   get all the tasks.
 app.post('/api/v1/tasks')       -   create a new task
